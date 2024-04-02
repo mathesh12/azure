@@ -24,11 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      - name: azure Package
+        run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
       # Runs a single command using the runners shell
       - name: azure credential
         run: az login --service-principal --username 254fc39b-c667-436b-80a7-f0dc7038e484 --password PBZ8Q~L0vNW49kZ7zK-5F134cRNEtA3wa_NIIbWF --tenant 254fc39b-c667-436b-80a7-f0dc7038e484
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
