@@ -33,4 +33,4 @@ jobs:
       - name: Run a ARM template
         run: |
           echo mutiple storage account creation
-          az deployment  group create --resource-group rg163 --template-file rg163
+          az deployment group create --resource-group rg163 --template-file multistracc.json
